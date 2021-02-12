@@ -10,15 +10,15 @@ export function Qualification() {
     <Content>
       <ContentStars>
         <Input id="radio1" type="radio" name="stars" value="5"/>
-          <Star for="radio1">★</Star>
+          <Star htmlFor="radio1">★</Star>
         <Input id="radio2" type="radio" name="stars" value="4"/>
-          <Star for="radio2">★</Star>
+          <Star htmlFor="radio2">★</Star>
         <Input id="radio3" type="radio" name="stars" value="3"/>
-          <Star for="radio3">★</Star>
+          <Star htmlFor="radio3">★</Star>
         <Input id="radio4" type="radio" name="stars" value="2"/>
-          <Star for="radio4">★</Star>
+          <Star htmlFor="radio4">★</Star>
         <Input id="radio5" type="radio" name="stars" value="1"/>
-          <Star for="radio5">★</Star>
+          <Star htmlFor="radio5">★</Star>
       </ContentStars>
     </Content>
   )
