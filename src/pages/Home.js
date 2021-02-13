@@ -28,7 +28,12 @@ function Home() {
         altComic = {data.comicData.alt}
       />
       <Qualification></Qualification>
-      <Button></Button>
+      <Button
+        functionButton= {'Añadir a favoritos'}
+      />
+      <Button
+        functionButton= {'Siguiente Comic'}
+      />
     </>
   )
 }

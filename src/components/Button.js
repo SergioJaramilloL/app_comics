@@ -1,6 +1,6 @@
-export function Button() {
+export function Button({ functionButton }) {
 
   return(
-    <button>Añadir a favoritos</button>
+    <button>{functionButton}</button>
   )
 }
