@@ -12,7 +12,7 @@ export function getComicData(){
     const rand = Math.floor(Math.random() * (2424 - 1)) + 1;
     dispatch({ type: COMIC_LOADING });
     try{
-      const { data } = await axios.get(`https://xkcd.now.sh/?comic=${rand}`);
+      const { data } = await axios.get(`${process.env.REACT_APP_BASE_URL}${rand}`);
       dispatch({ type: COMIC_DATA, payload: data });
     } catch (error) {
       dispatch({ type:COMIC_FAILURE, payload: error });
