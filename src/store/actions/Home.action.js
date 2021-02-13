@@ -9,9 +9,10 @@ import {
 
 export function getComicData(){
   return async function (dispatch){
+    const rand = Math.floor(Math.random() * (2424 - 1)) + 1;
     dispatch({ type: COMIC_LOADING });
     try{
-      const { data } = await axios.get('https://xkcd.now.sh/?comic=614');
+      const { data } = await axios.get(`https://xkcd.now.sh/?comic=${rand}`);
       dispatch({ type: COMIC_DATA, payload: data });
     } catch (error) {
       dispatch({ type:COMIC_FAILURE, payload: error });
