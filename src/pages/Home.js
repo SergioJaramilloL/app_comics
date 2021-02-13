@@ -1,7 +1,7 @@
 import { BulletPoint } from '../components/BulletPoint';
 import { Title } from '../components/Title';
 import { Qualification } from '../components/Qualification/Qualification';
-import { Button } from '../components/Button';
+import { ButtonAdd, ButtonNext } from '../components/Button';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getComicData } from '../store/actions/Home.action';
@@ -14,8 +14,17 @@ function Home() {
   });
 
   useEffect(() => {
-    dispatch(getComicData())
+    dispatch(getComicData());
   }, [dispatch]);
+
+  function handleAddFavorites(event) {
+    event.preventDefault();
+  }
+
+  async function handleNextComic(event) {
+    event.preventDefault();
+    dispatch(getComicData());
+  }
 
   return(
     <>
@@ -28,11 +37,13 @@ function Home() {
         altComic = {data.comicData.alt}
       />
       <Qualification></Qualification>
-      <Button
-        functionButton= {'Añadir a favoritos'}
+      <ButtonAdd
+        functionButton = {'Añadir a favoritos'}
+        handleAddFavorites = {handleAddFavorites}
       />
-      <Button
-        functionButton= {'Siguiente Comic'}
+      <ButtonNext
+        functionButton = {'Siguiente Comic'}
+        handleNextComic = {handleNextComic}
       />
     </>
   )

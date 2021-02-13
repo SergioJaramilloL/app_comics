@@ -10,9 +10,11 @@ import {
 export function getComicData(){
   return async function (dispatch){
     const rand = Math.floor(Math.random() * (2424 - 1)) + 1;
+    const BASE_URL= process.env.REACT_APP_BASE_URL
     dispatch({ type: COMIC_LOADING });
+    console.log('variable de entorno', BASE_URL)
     try{
-      const { data } = await axios.get(`${process.env.REACT_APP_BASE_URL}${rand}`);
+      const { data } = await axios.get(`${BASE_URL}${rand}`);
       dispatch({ type: COMIC_DATA, payload: data });
     } catch (error) {
       dispatch({ type:COMIC_FAILURE, payload: error });
