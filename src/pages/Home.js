@@ -15,13 +15,18 @@ function Home() {
 
   useEffect(() => {
     dispatch(getComicData())
-  }, []);
-  console.log(data);
+  }, [dispatch]);
 
   return(
     <>
-      <Title></Title>
-      <BulletPoint></BulletPoint>
+      <Title
+        titleComic = {data.comicData.title}
+        yearComic = {data.comicData.year}
+      />
+      <BulletPoint
+        urlComic = {data.comicData.img}
+        altComic = {data.comicData.alt}
+      />
       <Qualification></Qualification>
       <Button></Button>
     </>

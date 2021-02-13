@@ -1,9 +1,9 @@
-export function Title( titleComic, yearComic ) {
+export function Title({ titleComic, yearComic }) {
 
   return(
     <div>
-      <h2>Woodpecker</h2>
-      <label>2009</label>
+      <h2>{titleComic}</h2>
+      <label>{yearComic}</label>
     </div>
   )
 }
