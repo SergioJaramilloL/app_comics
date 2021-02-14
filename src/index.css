@@ -2,23 +2,13 @@
 
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Indie Flower', cursive;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background: url("./image/background.jpg");
   background-repeat: repeat;
 }
 
 code {
-  font-family: 'Indie Flower', cursive;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-button {
-  font-family: 'Indie Flower', cursive;
-  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
 }

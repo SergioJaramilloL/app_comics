@@ -1,0 +1,70 @@
+$primaryColor: rgb(216, 33, 33);
+$secundaryColor: yellow;
+$tertiaryColor: black;
+$primaryBorder: 4px solid $tertiaryColor;
+$fontSizeHeader: 35px;
+$fontSizeHeaderForPhone: 25px;
+
+@mixin list-items-style {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0em 1.25rem;
+  transition: all 0.3s ease 0s;
+  border: $primaryBorder;
+
+  &:hover{
+    position: relative;
+    transform: scale(1.4);
+    background-color: $primaryColor;
+  }
+  
+  a{
+    font-size: $fontSizeHeader;
+    text-decoration: none;
+    color: $secundaryColor;
+  }
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 10%;
+  height: 2em;
+  background-color: $primaryColor;
+  border-bottom: $primaryBorder;
+  
+  a{
+    img{
+      cursor: pointer;
+      width: 20em; 
+      height: 6em;
+      border-radius: 0em 0em 2rem 2rem;
+      margin-top: 2.5em;
+      border: $primaryBorder;
+      transition: all 0.3s ease 0s;
+
+      &:hover{
+        position: relative;
+        transform: scale(1.05);
+      }
+    }
+  }
+  
+  nav{
+    width: 40%;
+
+    ul{
+      display: flex;
+      list-style: none;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 5px;
+
+      li{
+        @include list-items-style();
+      }
+    }
+  }
+}
+
