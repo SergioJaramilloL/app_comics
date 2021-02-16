@@ -12,8 +12,8 @@ function Header() {
           </a>
           <nav>
             <ul>
-              <li><a href="#">Comics</a></li>
-              <li className="toFav"><a href="#">Favoritos</a></li>
+              <li><a href="/">Comics</a></li>
+              <li className="toFav"><a href="/">Favoritos</a></li>
             </ul>
           </nav> 
       </header>

@@ -7,6 +7,7 @@ import { Classification } from '../components/Classification';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getComicData } from '../store/actions/Home.action';
+import { CreateInLocalStorage } from '../utils/LocalStorageCRUD';
 
 function Home() {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ function Home() {
 
   function handleAddFavorites(event) {
     event.preventDefault();
+    CreateInLocalStorage(data);
   }
 
   async function handleNextComic(event) {
@@ -30,19 +32,17 @@ function Home() {
 
   return(
     <div>
-      <p>
-        <Title
-          titleComic = {data.comicData.title}
-          yearComic = {data.comicData.year}
-        />
-      </p>
+      <Title
+        titleComic = {data.comicData.title}
+        yearComic = {data.comicData.year}
+      />
       <div className="container">
         <BulletPoint
           urlComic = {data.comicData.img}
           altComic = {data.comicData.alt}
         />
-        <div className="container_interactive">
-          <div className="interactive_classification">
+        <div className = "container_interactive">
+          <div className = "interactive_classification">
             <Classification></Classification>
           </div>
           <div>

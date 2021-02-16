@@ -4,7 +4,9 @@ import {
   COMIC_LOADING,
   COMIC_FINISHED,
   COMIC_DATA,
-  COMIC_FAILURE
+  COMIC_FAILURE,
+  COMIC_CLASSIFICATION,
+  COMIC_QUALIFICATION
 } from '../reducers/Home.reducer';
 
 export function getComicData(){
@@ -12,7 +14,6 @@ export function getComicData(){
     const rand = Math.floor(Math.random() * (2424 - 1)) + 1;
     const BASE_URL= process.env.REACT_APP_BASE_URL
     dispatch({ type: COMIC_LOADING });
-    console.log('variable de entorno', BASE_URL)
     try{
       const { data } = await axios.get(`${BASE_URL}${rand}`);
       dispatch({ type: COMIC_DATA, payload: data });
@@ -24,19 +25,20 @@ export function getComicData(){
   }
 }
 
+export function setClassification(value) {
+  return function (dispatch){
+    dispatch({ type: COMIC_CLASSIFICATION, payload: value });
+  }
+}
+
+
 // export function getComicData(){
 //   const proxyUrl = 'https://cors-anywhere.herokuapp.com';
 //   const url = 'http://xkcd.com/614/info.0.json';
 //   return async function (dispatch, url, options = {} ){
 //     dispatch({ type: COMIC_LOADING });
 //     try{
-//       const { data } = await axios.get(`${proxyUrl}/${url}`, {
-//         ...options,
-//         headers: {
-//           ...options.headers,
-//           'X-Requested-With': 'wololo',
-//         }, 
-//       })
+//       const { data } = await axios.get(`${proxyUrl}/${url}`)
 //       console.log('action', data);
 //       dispatch({ type: COMIC_DATA, payload: data });
 //     } catch (error) {

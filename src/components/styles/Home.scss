@@ -17,7 +17,7 @@ div{
         display: flex;
         flex-direction: column;
         text-align: center;
-        justify-content: center;
+        margin: auto 0;
 
         &.interactive_classification{
           align-content: space-around;

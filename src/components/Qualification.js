@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export function Qualification() {
   return(
-    <form>
+    <div className="container_qualification">
+      <h4 className="statement">Califica tu comic:</h4>
       <p>
         <input id="radio1" type="radio" name="stars" value="5"/>
           <label htmlFor="radio1"><FontAwesomeIcon icon={faStar}/></label>
@@ -17,6 +18,6 @@ export function Qualification() {
         <input id="radio5" type="radio" name="stars" value="1"/>
           <label htmlFor="radio5"><FontAwesomeIcon icon={faStar}/></label>
       </p>
-    </form>
+    </div>
   )
 }
