@@ -1,0 +1,13 @@
+$primaryColor: rgb(216, 33, 33);
+$secundaryColor: #FBC43D;
+$tertiaryColor: black;
+$primaryBorder: 4px solid $tertiaryColor;
+$fontSizeHeader: 35px;
+
+h1{
+  font-size: 2.5em;
+  color: $secundaryColor;
+  -webkit-text-stroke: 2px $tertiaryColor;
+  margin-top: 25px;
+  margin-bottom: 0;
+}

@@ -1,9 +1,8 @@
 $primaryColor: rgb(216, 33, 33);
-$secundaryColor: yellow;
+$secundaryColor: #FBC43D;
 $tertiaryColor: black;
 $primaryBorder: 4px solid $tertiaryColor;
 $fontSizeHeader: 35px;
-$fontSizeHeaderForPhone: 25px;
 
 @mixin list-items-style {
   cursor: pointer;
@@ -11,13 +10,22 @@ $fontSizeHeaderForPhone: 25px;
   padding: 0em 1.25rem;
   transition: all 0.3s ease 0s;
   border: $primaryBorder;
+  border-radius: 10px;
 
   &:hover{
     position: relative;
-    transform: scale(1.4);
+    transform: scale(1.2) rotate(2deg);
     background-color: $primaryColor;
   }
-  
+
+  &.toFav{
+    &:hover{
+      position: relative;
+      transform: scale(1.2) rotate(-2deg);
+      background-color: $primaryColor;
+    }
+  }
+
   a{
     font-size: $fontSizeHeader;
     text-decoration: none;

@@ -1,24 +1,28 @@
+import './styles/Button.scss';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 export function ButtonAdd({ 
-  functionButton,
   handleAddFavorites
  }) 
 {
   return(
     <button
+      className="buttonAdd"
+      title="Añadir a favoritos"
       onClick = {handleAddFavorites}
-    >{functionButton}</button>
+    ><FontAwesomeIcon icon={faPlus}/></button>
   )
 }
 
 export function ButtonNext({ 
-  functionButton,
   handleNextComic
  }) 
 {
-
   return(
     <button
+      className="buttonNext"
       onClick = {handleNextComic}
-    >{functionButton}</button>
+    >Siguiente Comic</button>
   )
 }

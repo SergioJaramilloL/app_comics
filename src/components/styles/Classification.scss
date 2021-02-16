@@ -1,0 +1,65 @@
+$primaryColor: rgb(216, 33, 33);
+$secundaryColor: #FBC43D;
+$tertiaryColor: black;
+$primaryBorder: 4px solid $tertiaryColor;
+$fontSizeHeader: 35px;
+$fontSizeButtonprimary: 20px;
+
+label{
+  &.statement{
+    font-size: 1.5em;
+    font-weight: $secundaryColor;
+    -webkit-text-stroke: 1px $tertiaryColor;
+    margin: auto 0;
+  }
+}
+
+div{
+  &.classification{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #6C757D;
+    
+    h4{
+      &.statement{
+        font-size: 1.5em;
+        font-weight: $secundaryColor;
+        -webkit-text-stroke: 1px $tertiaryColor;
+        color: $secundaryColor;
+        margin: 5px 0;
+      }
+    }
+
+    button{
+      font-size: $fontSizeButtonprimary;
+
+      &.classification_button{
+        cursor: pointer;
+        display: inline-block;
+        padding: 0em 1.25rem;
+        transition: all 0.3s ease 0s;
+        border: $primaryBorder;
+        margin: 7px 0;
+        border-radius: 10px;
+
+        &:hover {
+          position: relative;
+          transform: scale(1.5);
+          background-color: $primaryColor;
+          color: $secundaryColor;
+        };
+
+        &:active{
+          position: relative;
+          transform: scale(1.5);
+          background-color: $primaryColor;
+          color: $secundaryColor;
+        };
+      }
+    }
+  }
+}
+
+

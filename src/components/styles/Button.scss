@@ -1,0 +1,44 @@
+$primaryColor: rgb(216, 33, 33);
+$secundaryColor: #FBC43D;
+$tertiaryColor: black;
+$primaryBorder: 4px solid $tertiaryColor;
+$fontSizeHeader: 35px;
+$fontSizeButtonprimary: 20px;
+
+
+button{
+  &.buttonAdd{
+    cursor: pointer;
+    display:block;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: $primaryColor;
+    color: $secundaryColor;
+    border: $primaryBorder;
+    border-radius: 100%;
+    transition: all 0.3s ease 0s;
+    font-size: 2em;
+    margin: 0 auto;
+  
+    &:hover{
+      position: relative;
+      transform: scale(1.4) rotate(180deg);
+    }
+  }
+
+  &.buttonNext{
+    cursor: pointer;
+    display:block;
+    background-color: $primaryColor;
+    color: $secundaryColor;
+    border: $primaryBorder;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+    font-size: 2em;
+  
+    &:hover{
+      position: relative;
+      transform: scale(1.2);
+    }
+  }
+}

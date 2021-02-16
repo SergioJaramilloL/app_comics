@@ -1,7 +1,9 @@
+import '../components/styles/Home.scss';
 import { BulletPoint } from '../components/BulletPoint';
 import { Title } from '../components/Title';
-import { Qualification } from '../components/Qualification/Qualification';
+import { Qualification } from '../components/Qualification';
 import { ButtonAdd, ButtonNext } from '../components/Button';
+import { Classification } from '../components/Classification';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getComicData } from '../store/actions/Home.action';
@@ -27,25 +29,36 @@ function Home() {
   }
 
   return(
-    <>
-      <Title
-        titleComic = {data.comicData.title}
-        yearComic = {data.comicData.year}
-      />
-      <BulletPoint
-        urlComic = {data.comicData.img}
-        altComic = {data.comicData.alt}
-      />
-      <Qualification></Qualification>
-      <ButtonAdd
-        functionButton = {'Añadir a favoritos'}
-        handleAddFavorites = {handleAddFavorites}
-      />
-      <ButtonNext
-        functionButton = {'Siguiente Comic'}
-        handleNextComic = {handleNextComic}
-      />
-    </>
+    <div>
+      <p>
+        <Title
+          titleComic = {data.comicData.title}
+          yearComic = {data.comicData.year}
+        />
+      </p>
+      <div className="container">
+        <BulletPoint
+          urlComic = {data.comicData.img}
+          altComic = {data.comicData.alt}
+        />
+        <div className="container_interactive">
+          <div className="interactive_classification">
+            <Classification></Classification>
+          </div>
+          <div>
+            <Qualification></Qualification>
+          </div>
+        </div>
+        <div className="container_buttons">
+          <ButtonAdd
+            handleAddFavorites = {handleAddFavorites}
+          />
+          <ButtonNext
+            handleNextComic = {handleNextComic}
+          />
+        </div>
+      </div>
+    </div>
   )
 }
 

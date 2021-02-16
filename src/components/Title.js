@@ -1,9 +1,9 @@
-export function Title({ titleComic, yearComic }) {
+import './styles/Title.scss';
 
+
+export function Title({ titleComic, yearComic }) {
+  const text = `${titleComic} (${yearComic})`
   return(
-    <div>
-      <h2>{titleComic}</h2>
-      <label>{yearComic}</label>
-    </div>
+    <h1>{text}</h1>
   )
 }

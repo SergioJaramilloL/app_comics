@@ -1,0 +1,36 @@
+$primaryColor: rgb(216, 33, 33);
+$secundaryColor: #FBC43D;
+$tertiaryColor: black;
+$primaryBorder: 4px solid $tertiaryColor;
+$fontSizeHeader: 35px;
+$fontSizeButtonprimary: 20px;
+
+
+div{
+  &.container{
+    display:flex;
+    justify-content: space-between;
+    padding: 0 1em;
+
+    div{
+      &.container_interactive{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+
+        &.interactive_classification{
+          align-content: space-around;
+        }
+     }
+
+      &.container_buttons{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        padding: 5em 1em 5em 0;
+      }
+    }
+  }
+}
