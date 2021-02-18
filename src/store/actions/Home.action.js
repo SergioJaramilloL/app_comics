@@ -25,49 +25,14 @@ export function getComicData(){
   }
 }
 
+export function setQualification(value) {
+  return function (dispatch){
+    dispatch({ type: COMIC_QUALIFICATION, payload: value });
+  }
+}
+
 export function setClassification(value) {
   return function (dispatch){
     dispatch({ type: COMIC_CLASSIFICATION, payload: value });
   }
 }
-
-
-// export function getComicData(){
-//   const proxyUrl = 'https://cors-anywhere.herokuapp.com';
-//   const url = 'http://xkcd.com/614/info.0.json';
-//   return async function (dispatch, url, options = {} ){
-//     dispatch({ type: COMIC_LOADING });
-//     try{
-//       const { data } = await axios.get(`${proxyUrl}/${url}`)
-//       console.log('action', data);
-//       dispatch({ type: COMIC_DATA, payload: data });
-//     } catch (error) {
-//       console.log('entro al catch')
-//       dispatch({ type:COMIC_FAILURE, payload: error });
-//     } finally {
-//       dispatch({ type: COMIC_FINISHED });
-//     }
-//   }
-// }
-
-// export function getComicData(){
-  
-//   return async function (dispatch){
-//     dispatch({ type: COMIC_LOADING });
-//     try{
-//       const { data } = await axios ({
-//         method: 'GET',
-//         dataType: 'jsonp',
-//         data: {},
-//         url: 'http://xkcd.com/614/info.0.json',
-//       })
-//       console.log('action', data);
-//       dispatch({ type: COMIC_DATA, payload: data });
-//     } catch (error) {
-//       console.log('entro al catch')
-//       dispatch({ type:COMIC_FAILURE, payload: error });
-//     } finally {
-//       dispatch({ type: COMIC_FINISHED });
-//     }
-//   }
-// }
