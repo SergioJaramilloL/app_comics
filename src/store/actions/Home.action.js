@@ -17,6 +17,8 @@ export function getComicData(){
     try{
       const { data } = await axios.get(`${BASE_URL}${rand}`);
       dispatch({ type: COMIC_DATA, payload: data });
+      dispatch({ type: COMIC_QUALIFICATION, payload: '' });
+      dispatch({ type: COMIC_CLASSIFICATION, payload: '' });
     } catch (error) {
       dispatch({ type:COMIC_FAILURE, payload: error });
     } finally {
