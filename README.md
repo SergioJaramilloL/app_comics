@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# ComicApp
+Este proyecto consume el API de xkcd: https://xkcd.com/json.html mostrando aleatoriamente un comic y dando la oportunidad al usuario de interactuar con cada uno de los comics. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Requisitos
+Para este proyecto necesitas tener instalado lo siguiente:
 
-## Available Scripts
+* Node.js
+* Usar el proxy_comics_xkcd que esta en el siguiente repositorio: https://github.com/SergioJaramilloL/proxy_comics_xkcd.git y sigue las instrucciones
 
-In the project directory, you can run:
+## Configuración
+Para configurar este proyecto de forma local sigue estas instrucciones:
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clona el proyecto de Git:
+```
+git clone
+```
+2. Instala las dependencias con YARN ó NPM, el que tu prefieras:
+```
+npm install
+ó
+yarn install
+```
+3. Crea un archivo .env con la variable de entorno:
+```
+REACT_APP_BASE_URL=http://localhost:8000/
+```
+4. Ejecuta el proyecto con el siguiente comando:
+```
+npm start
+ó
+yarn start
+```
+## Como interactuar
+La aplicación muestra un header en el que el logo tiene una ruta defectuosa para poder ver la página de error, además tiene una barra de navegación con las opciones "comic" y "favoritos", esta última al momento no esta implementada. En el body hay 3 columnas, la primera muestra el comic aleatorio, la segundo tiene la posibilidad de clasificar por categoria y de calificar en un rango de 1 a 5, estas dos opciones estan funcionales y envían el valor de cada una a un estado global, por ultimo esta la tercera columna en donde esta el botón de añadir a favoritos que al pulsarlo guarda los datos del comic actual junto con su clasificación y calificación en el *local storage* del navegador, seguido esta el botón para obtener el siguiente comic. Puedes antojarte mirando la siguiente demostración de comicApp https://drive.google.com/file/d/1_DfyNGpkuJem2CNmVZSy1upxvEsbCI7E/view
