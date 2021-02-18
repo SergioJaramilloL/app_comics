@@ -1,4 +1,6 @@
 import '../components/styles/Home.scss';
+import '../components/styles/Swal.scss';
+import swal from 'sweetalert';
 import { BulletPoint } from '../components/BulletPoint';
 import { Title } from '../components/Title';
 import { Qualification } from '../components/Qualification';
@@ -25,6 +27,12 @@ function Home() {
   function handleAddFavorites(event) {
     event.preventDefault();
     CreateInLocalStorage(data);
+    swal("Comic agregado a favoritos", {
+      className: "message_addFavorites",
+      buttons: false,
+      timer: 1000,
+      closeOnClickOutside : true, 
+    });
   }
 
   async function handleNextComic(event) {

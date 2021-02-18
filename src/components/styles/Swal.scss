@@ -1,0 +1,12 @@
+$primaryColor: rgb(216, 33, 33);
+$secundaryColor: #FBC43D;
+$tertiaryColor: black;
+$primaryBorder: 4px solid $tertiaryColor;
+$fontSizeHeader: 35px;
+
+.message_addFavorites {
+  background-color: $primaryColor;
+  color: $secundaryColor;
+  border: $primaryBorder;
+  border-radius: 1rem;
+}
