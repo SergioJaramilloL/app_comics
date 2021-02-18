@@ -1,0 +1,51 @@
+$primaryColor: rgb(216, 33, 33);
+$secundaryColor: #FBC43D;
+$tertiaryColor: black;
+$primaryBorder: 4px solid $tertiaryColor;
+$fontSizeHeader: 35px;
+
+div{
+  &.Error404_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+    
+    div{
+      &.Error404_container-right{
+        font-size: 20px;
+
+        div{
+          &.Error404_container-content{
+            background-color: rgba(0, 0, 0, 0.7);
+            color: $primaryColor;
+            padding: 15px;
+            margin: 0 15px;
+            border-radius: 1rem;
+            border: $primaryBorder;
+
+            a{
+              &.button_back{
+                cursor: pointer;
+                color: $secundaryColor;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    img{
+      &.image_error{
+        border-radius: 1rem;
+        border: $primaryBorder;
+      }
+    }
+    }
+  }
+
+
+
+

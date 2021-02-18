@@ -8,6 +8,8 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getComicData } from '../store/actions/Home.action';
 import { CreateInLocalStorage } from '../utils/LocalStorageCRUD';
+import PageLoading from '../components/PageLoading';
+import PageNotFound from '../components/PageNotFound';
 
 function Home() {
   const dispatch = useDispatch();
@@ -28,6 +30,18 @@ function Home() {
   async function handleNextComic(event) {
     event.preventDefault();
     dispatch(getComicData());
+  }
+
+  if(data.loading) {
+    return(
+      <PageLoading/>
+    )
+  }
+
+  if(data.error){
+    return (
+    <PageNotFound/>
+    )
   }
 
   return(

@@ -4,9 +4,9 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-
 import Home from './pages/Home';
 import Header from './components/Header';
+import PageNotFound from './components/PageNotFound'
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Header></Header>
         <Switch>
           <Route exact path= "/" component= {Home}/>
+          <Route component={PageNotFound}/>
         </Switch>
       </Router>
     </div>
